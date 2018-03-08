@@ -1,7 +1,9 @@
+
 <?php
-
+echo '<h1> Test Web Form</h1>';
+phpinfo();
 require('../vendor/autoload.php');
-
+/*
 $app = new Silex\Application();
 $app['debug'] = true;
 
@@ -23,3 +25,4 @@ $app->get('/', function() use($app) {
 });
 
 $app->run();
+*/
