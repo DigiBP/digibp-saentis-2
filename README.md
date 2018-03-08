@@ -7,6 +7,7 @@ This application supports the [Getting Started with PHP on Heroku](https://devce
 ## Deploying
 
 Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ```sh
 $ git clone git@github.com:heroku/php-getting-started.git # or clone your own fork
