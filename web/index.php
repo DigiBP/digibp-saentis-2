@@ -1,28 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+
+
+The content of the document......
 
 <?php
-echo '<h1> Test Web Form</h1>';
+echo '<h1> Main Page</h1>';
+?>
+<ul>
+<li><a href="./views/createTicket.php">Create Ticket (Webform)</a></li>
+<li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
+<li><a href="./views/ticketDashboard.php">Ticket Dashboard (Overall)</a></li>
+
+<?php
 phpinfo();
-require('../vendor/autoload.php');
-/*
-$app = new Silex\Application();
-$app['debug'] = true;
+?>
 
-// Register the monolog logging service
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-  'monolog.logfile' => 'php://stderr',
-));
 
-// Register view rendering
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/views',
-));
+</body>
 
-// Our web handlers
-
-$app->get('/', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('index.php');
-});
-
-$app->run();
-*/
+</html>
