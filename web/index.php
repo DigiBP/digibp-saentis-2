@@ -5,14 +5,10 @@
   <title>Page Title</title>
 </head>
 
-<body>
+    <body>
 
 
-The content of the document......
 
-<?php
-echo '<h1> Main Page</h1>';
-?>
 <ul>
 <li><a href="./views/createTicket.php">Create Ticket (Webform)</a></li>
 <li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
@@ -23,7 +19,7 @@ phpinfo();
 ?>
 
 
-</body>
+
     
     <form class="form-horizontal">
 <fieldset>
@@ -127,6 +123,9 @@ phpinfo();
 
 </fieldset>
 </form>
+    
+        </ul>
 
+    </body>
 
 </html>
