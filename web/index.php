@@ -14,10 +14,6 @@
 <li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
 <li><a href="./views/ticketDashboard.php">Ticket Dashboard (Overall)</a></li>
 
-<?php
-phpinfo();
-?>
-
     
     <form class="form-horizontal">
 <fieldset>
