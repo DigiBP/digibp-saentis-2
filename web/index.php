@@ -18,8 +18,6 @@
 phpinfo();
 ?>
 
-
-
     
     <form class="form-horizontal">
 <fieldset>
