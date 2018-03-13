@@ -7,8 +7,6 @@
 
     <body>
 
-
-
 <ul>
 <li><a href="./views/createTicket.php">Create Ticket (Webform)</a></li>
 <li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
@@ -57,7 +55,6 @@
     </select>
   </div>
 </div>
-
 <!-- Select Basic -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="affectedApplication">Affected Application</label>
