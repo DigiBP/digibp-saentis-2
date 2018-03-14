@@ -22,11 +22,3 @@ h1{
   transition: top .2s ease-in-out,  font-size .2s ease-in-out;
 }
 
-.form-control input-md{
-  width: 100%;
-  padding: 20px;
-  border: 1px solid white;
-  font-size: 20px;
-  background-color: teal;
-  color: white;
-}
