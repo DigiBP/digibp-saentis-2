@@ -18,8 +18,7 @@ h1{
   margin: 10px;
   padding: 0 10px;
   background-color: teal;
-  -webkit-transition: top .2s ease-in-out,  font-size .2s ease-in-out;
-  transition: top .2s ease-in-out,  font-size .2s ease-in-out;
+
 }
 
 .form-control input-md{
