@@ -1,22 +1,15 @@
-.body{
+body{
     font-family: 'Lato', sans-serif;
     color: white;
     background-color: teal;
 }
 
-.h1{
+h1{
     font-size: 60px;
     margin: 0px;
     padding: 0px;
 }
 
-.form-group{
-   display:block;
-    max-width: auto;
-    margin:2rem auto;
-    border:2px solid #E74C3C;
-    padding:2rem;
-}
 
 .col-md-4 control-label {
   position: absolute;
