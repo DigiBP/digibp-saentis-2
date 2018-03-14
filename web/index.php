@@ -4,7 +4,7 @@
 <head>
   <title>Page Title</title>
     
-<ilnk rel="stylesheet" type="text/css" href="stylesheets/main.css"></ilnk>
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     
 </head>
 
