@@ -3,7 +3,7 @@
 
 <head>
   <title>Page Title</title>
-<ilnk rel="stylesheet" type="text/css" href="\\ss002207\TAARAJA5$\Documents\GitHub\https---github.com-DigiBP-digibp-saentis-2.git\digibp-saentis-2\web\stylesheets\main.css"></ilnk>
+<ilnk rel="stylesheet" type="text/css" href="//ss002207/TAARAJA5$/Documents/GitHub/https---github.com-DigiBP-digibp-saentis-2.git/digibp-saentis-2/web/stylesheets/main.css"></ilnk>
     
 </head>
 
