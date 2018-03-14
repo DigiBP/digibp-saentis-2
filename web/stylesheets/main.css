@@ -10,15 +10,14 @@ h1{
     padding: 0px;
 }
 
-
 .form-group{
-  position: absolute;
-  top: 0;
-  font-size: 30px;
-  margin: 10px;
-  padding: 0 10px;
-  background-color: teal;
-  -webkit-transition: top .2s ease-in-out,  font-size .2s ease-in-out;
-  transition: top .2s ease-in-out,  font-size .2s ease-in-out;
+   display:block;
+    max-width: auto;
+    margin:2rem auto;
+    border:2px solid #ffffff;
+    padding:2rem;
 }
+
+
+
 
