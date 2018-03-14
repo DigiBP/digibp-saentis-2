@@ -8,3 +8,10 @@
     
 }
 
+.col-md-2 {
+    display:block;
+    margin-bottom: 25px;
+    width 100%;
+    border: 2px solid steelblue;
+    
+}
