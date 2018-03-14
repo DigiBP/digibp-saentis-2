@@ -1,10 +1,10 @@
 
 
-.form-group{
-   display:block;
-    max-width: auto;
-    margin:2rem auto;
-    border:2px solid #E74C3C;
-    padding:2rem;
-}
 
+
+.form-group {
+    display: inline-block;
+  width: auto;
+  color: #4E4E4E;
+  position: relative;
+}
