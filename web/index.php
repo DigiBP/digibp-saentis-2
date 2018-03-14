@@ -3,7 +3,8 @@
 
 <head>
   <title>Page Title</title>
-<ilnk rel="stylesheet" type="text/css" href="//ss002207/TAARAJA5$/Documents/GitHub/https---github.com-DigiBP-digibp-saentis-2.git/digibp-saentis-2/web/stylesheets/main.css"></ilnk>
+    
+<ilnk rel="stylesheet" type="text/css" href="stylesheets/main.css"></ilnk>
     
 </head>
 
@@ -14,6 +15,8 @@
 <li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
 <li><a href="./views/ticketDashboard.php">Ticket Dashboard (Overall)</a></li>
 
+    <!--Form ame with h1  -->
+    <h1>Incident Creation</h1>
     
     <form class="form-horizontal">
 <fieldset>
