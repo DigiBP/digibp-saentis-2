@@ -69,11 +69,11 @@
    <label for="job">Affected Applications:</label>
 <select id="job" name="field4">
     
-<optgroup label="Affected Application">
+
   <option value="sap">SAP</option>
   <option value="servicenow">Service Now</option>
   <option value="microsoft">Microsoft</option>
- </optgroup>
+ 
 </select>     
     
     
