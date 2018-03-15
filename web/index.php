@@ -31,7 +31,7 @@
       
   <div> 
       <label for="impact">Impcat</label>
-    <select id="impact" name="impact" class="cool">
+    <select id="impact" type="impact" class="cool">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
       <option value="3">3 - Medium</option>
