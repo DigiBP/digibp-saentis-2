@@ -25,30 +25,25 @@
 <fieldset>
 <legend><span class="number">1</span> Incident Info </legend>
     
- <optgroup label="Impact">
+<label for="job">Interests:</label>
+<select id="job" name="field4">
+    
+<optgroup label="Impact">
   <option value="football">1 - Critical</option>
-  <option value="swimming">2 - High </option>
+  <option value="swimming">2 - High</option>
   <option value="fishing">3 - Medium</option>
   <option value="climbing">4 - Low</option>
-</optgroup> 
+</optgroup>
+</select>   
     
- <optgroup label="Urgency">
-  <option value="swimming">1 - High </option>
-  <option value="fishing">2 - Medium</option>
-  <option value="climbing">3 - Low</option>
-</optgroup> 
     
-    <optgroup label="Priority">
-  <option value="swimming">1 - High </option>
-  <option value="fishing">2 - Medium</option>
-  <option value="climbing">3 - Low</option>
-</optgroup> 
-    
+--------------------------------------------------------------------------------------
 <input type="text" name="field1" placeholder="Your Name *">
 <input type="email" name="field2" placeholder="Your Email *">
 <textarea name="field3" placeholder="About yourself"></textarea>
 <label for="job">Interests:</label>
 <select id="job" name="field4">
+    
 <optgroup label="Impact">
   <option value="football">Football</option>
   <option value="swimming">Swimming</option>
