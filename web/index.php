@@ -40,19 +40,7 @@
     
   </div>
 
-    
-    
-            <label for="field4"><span>Subject</span>
-        <select class="select-field" name="field4">
-          <option value="Appointment">Appointment</option>
-          <option value="Interview">Interview</option>
-          <option value="Regarding a post">Regarding a post</option>
-        </select>
-      </label>
-    
-    
-    
-    --------
+
     
   <div>
     <label for="lname">Last Name</label>
