@@ -21,12 +21,8 @@
     <form class="form-horizontal">
 <fieldset>
 
-<!-- Form Name -->
-<legend>Incident Creation</legend>
-
 <div class="wrap">
-  <h1>Rise</h1>
-  <h3>I built something similar as an engineer on Identity.com</h3>
+
   <div>
     <label for="fname">First Name</label>
     <input id="fname" type="text" class="cool"/>
