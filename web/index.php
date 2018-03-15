@@ -30,8 +30,8 @@
     
       
   <div> 
-      <label for="impact">Impcat
-    <select id="impact" type="text" class="cool">
+      <label for="impact"><span>Impcat</span>
+    <select clas="cool" id="impact" type="text">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
       <option value="3">3 - Medium</option>
@@ -41,6 +41,18 @@
   </div>
 
     
+    
+            <label for="field4"><span>Subject</span>
+        <select class="select-field" name="field4">
+          <option value="Appointment">Appointment</option>
+          <option value="Interview">Interview</option>
+          <option value="Regarding a post">Regarding a post</option>
+        </select>
+      </label>
+    
+    
+    
+    --------
     
   <div>
     <label for="lname">Last Name</label>
