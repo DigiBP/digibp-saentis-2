@@ -27,6 +27,32 @@
     <input id="fname" type="text" class="cool"/>
   </div>
 
+    
+    <div>
+  <label class="col-md-4 control-label" for="impact">Impcat</label>
+  
+    <select id="impact" name="impact" class="form-control">
+      <option value="1">1 - Critical</option>
+      <option value="2">2 - High</option>
+      <option value="3">3 - Medium</option>
+      <option value="4">4 - Low</option>
+    </select>
+  </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   <div>
     <label for="lname">Last Name</label>
     <input id="lname" type="text" class="cool"/>
