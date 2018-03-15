@@ -10,8 +10,9 @@
 
 <body>
 <h3>Incident Creation </h3>
+<div class="container">
 <form role="form"
-   name="variablesForm">
+   name="variablesForm" action="#" method="POST">
    <div class="row">
       <div class="col-xs-6">
          <h2>Please provide some information about your Incident.</h2>
@@ -109,50 +110,205 @@
          </div>
       </div><!-- col-xs-6 -->
    </div>
+   <input type="submit" value="Submit">
+</form>
    <!-- row -->
 
 <?php
 
-$data = json_encode($_POST);
-var_dump($data);
-CallAPI("POST", "https://saentisincident.herokuapp.com/rest/engine/default/process-definition/key/OverallIncident/start", $data);
-function CallAPI($method, $url, $data = false)
-{
-    $curl = curl_init();
-
-    switch ($method)
-    {
-        case "POST":
-            curl_setopt($curl, CURLOPT_POST, 1);
-
-            if ($data)
-                curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-            break;
-        case "PUT":
-            curl_setopt($curl, CURLOPT_PUT, 1);
-            break;
-        default:
-            if ($data)
-                $url = sprintf("%s?%s", $url, http_build_query($data));
+    $data = '{
+  "variables": {
+    "impact": {
+      "value": "'.$_POST['impact'].'",
+      "type": "String"
+    },
+    "urgency": {
+      "value": "'.$_POST['urgency'].'",
+      "type": "String"
+    },
+	"affectedApplication": {
+      "value": "'.$_POST['affectedApplication'].'",
+      "type": "String"
+    },
+    "summary": {
+      "value": "'.$_POST['summary'].'",
+      "type": "String"
+    },
+    "description": {
+      "value": "'.$_POST['description'].'",
+      "type": "String"
+    },
+    "SystemID": {
+      "value": "'.$_POST['SystemID'].'",
+      "type": "String"
+    },
+    "stepByStep": {
+      "value": "'.$_POST['stepByStep'].'",
+      "type": "String"
+    },
+    "customerName": {
+      "value": "'.$_POST['customerName'].'",
+      "type": "String"
+    },	
+    "customerMail": {
+      "value": "'.$_POST['customerMail'].'",
+      "type": "String"
+    },	
+	"customerPhone": {
+      "value": "'.$_POST['customerPhone'].'",
+      "type": "String"
+    },	
+    "ticketStatus": {
+      "value": "'.$_POST['ticketStatus'].'",
+      "type": "String"
+    },	
+	"ticketOrigin": {
+      "value": "EMA'.$_POST['ticketOrigin'].'IL",
+      "type": "String"
     }
+   
+  }
+  
+}';
+$data = array (
+  'variables' => 
+  array (
+    'impact' => 
+    array (
+      'value' => '\'.$_POST[\'impact\'].\'',
+      'type' => 'String',
+    ),
+    'urgency' => 
+    array (
+      'value' => '\'.$_POST[\'urgency\'].\'',
+      'type' => 'String',
+    ),
+    'affectedApplication' => 
+    array (
+      'value' => '\'.$_POST[\'affectedApplication\'].\'',
+      'type' => 'String',
+    ),
+    'summary' => 
+    array (
+      'value' => '\'.$_POST[\'summary\'].\'',
+      'type' => 'String',
+    ),
+    'description' => 
+    array (
+      'value' => '\'.$_POST[\'description\'].\'',
+      'type' => 'String',
+    ),
+    'SystemID' => 
+    array (
+      'value' => '\'.$_POST[\'SystemID\'].\'',
+      'type' => 'String',
+    ),
+    'stepByStep' => 
+    array (
+      'value' => '\'.$_POST[\'stepByStep\'].\'',
+      'type' => 'String',
+    ),
+    'customerName' => 
+    array (
+      'value' => '\'.$_POST[\'customerName\'].\'',
+      'type' => 'String',
+    ),
+    'customerMail' => 
+    array (
+      'value' => '\'.$_POST[\'customerMail\'].\'',
+      'type' => 'String',
+    ),
+    'customerPhone' => 
+    array (
+      'value' => '\'.$_POST[\'customerPhone\'].\'',
+      'type' => 'String',
+    ),
+    'ticketStatus' => 
+    array (
+      'value' => '\'.$_POST[\'ticketStatus\'].\'',
+      'type' => 'String',
+    ),
+    'ticketOrigin' => 
+    array (
+      'value' => 'EMA\'.$_POST[\'ticketOrigin\'].\'IL',
+      'type' => 'String',
+    ),
+  ),
+);
 
-    // Optional Authentication:
-    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($curl, CURLOPT_USERPWD, "username:password");
+$data_string = '{
+  "variables": {
+    "impact": {
+      "value": "'.$_POST['impact'].'",
+      "type": "String"
+    },
+    "urgency": {
+      "value": "'.$_POST['urgency'].'",
+      "type": "String"
+    },
+    "affectedApplication": {
+      "value": "'.$_POST['affectedApplication'].'",
+      "type": "String"
+    },
+    "summary": {
+      "value": "'.$_POST['summary'].'",
+      "type": "String"
+    },
+    "description": {
+      "value": "'.$_POST['description'].'",
+      "type": "String"
+    },
+    "SystemID": {
+      "value": "'.$_POST['SystemID'].'",
+      "type": "String"
+    },
+    "stepByStep": {
+      "value": "'.$_POST['stepByStep'].'",
+      "type": "String"
+    },
+    "customerName": {
+      "value": "'.$_POST['customerName'].'",
+      "type": "String"
+    },
+    "customerMail": {
+      "value": "'.$_POST['customerMail'].'",
+      "type": "String"
+    },
+    "customerPhone": {
+      "value": "'.$_POST['customerPhone'].'",
+      "type": "String"
+    },
+    "ticketStatus": {
+      "value": "'.$_POST['ticketStatus'].'",
+      "type": "String"
+    },
+    "ticketOrigin": {
+      "value": "EMA'.$_POST['ticketOrigin'].'IL",
+      "type": "String"
+    }
+  }
+}';
 
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/Overall/start", $data_string);
 
-    $result = curl_exec($curl);
+function callCamundaAPI($url, $data_string){
+        $ch = curl_init('https://saentisincident.herokuapp.com/rest/process-definition/key/Overall/start');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($data_string))
+        );
 
-    curl_close($curl);
+        $result = curl_exec($ch);
+	  var_dump($result);
 
-    return $result;
 }
 
 
-
 ?>
-
+</div>
 </body>
 </html>
+
