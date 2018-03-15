@@ -23,7 +23,27 @@
 <div class="form-style-5">
 <form>
 <fieldset>
-<legend><span class="number">1</span> Candidate Info</legend>
+<legend><span class="number">1</span> Incident Info </legend>
+    
+ <optgroup label="Impact">
+  <option value="football">1 - Critical</option>
+  <option value="swimming">2 - High </option>
+  <option value="fishing">3 - Medium</option>
+  <option value="climbing">4 - Low</option>
+</optgroup> 
+    
+ <optgroup label="Urgency">
+  <option value="swimming">1 - High </option>
+  <option value="fishing">2 - Medium</option>
+  <option value="climbing">3 - Low</option>
+</optgroup> 
+    
+    <optgroup label="Priority">
+  <option value="swimming">1 - High </option>
+  <option value="fishing">2 - Medium</option>
+  <option value="climbing">3 - Low</option>
+</optgroup> 
+    
 <input type="text" name="field1" placeholder="Your Name *">
 <input type="email" name="field2" placeholder="Your Email *">
 <textarea name="field3" placeholder="About yourself"></textarea>
