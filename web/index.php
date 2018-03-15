@@ -84,18 +84,7 @@
 <input type="text" name="field1" placeholder="Your Name *">
 <input type="email" name="field2" placeholder="Your Email *">
 <textarea name="field3" placeholder="About yourself"></textarea>
-<label for="job">Interests:</label>
-<select id="job" name="field4">
-    
-<optgroup label="Impact">
-  <option value="football">Football</option>
-  <option value="swimming">Swimming</option>
-  <option value="fishing">Fishing</option>
-  <option value="climbing">Climbing</option>
-  <option value="cycling">Cycling</option>
-  <option value="other_outdoor">Other</option>
-</optgroup>
-</select>      
+
 </fieldset>
 <fieldset>
 <legend><span class="number">2</span> Additional Info</legend>
