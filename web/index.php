@@ -29,10 +29,10 @@
 <select id="job" name="field4">
     
 <optgroup label="Impact">
-  <option value="football">1 - Critical</option>
-  <option value="swimming">2 - High</option>
-  <option value="fishing">3 - Medium</option>
-  <option value="climbing">4 - Low</option>
+  <option value="critical">1 - Critical</option>
+  <option value="high">2 - High</option>
+  <option value="medium">3 - Medium</option>
+  <option value="low">4 - Low</option>
 </optgroup>
 </select>   
     
@@ -43,13 +43,43 @@
 <select id="job" name="field4">
     
 <optgroup label="Urgency">
-  <option value="football">1 - High</option>
-  <option value="swimming">2 - Medium</option>
-  <option value="fishing">3 - Low</option>
+  <option value="high">1 - High</option>
+  <option value="medium">2 - Medium</option>
+  <option value="low">3 - Low</option>
  </optgroup>
 </select>       
     
--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+    
+   <label for="job">Priority:</label>
+<select id="job" name="field4">
+    
+<optgroup label="Priority">
+  <option value="high">1 - High</option>
+  <option value="medium">2 - Medium</option>
+  <option value="low">3 - Low</option>
+ </optgroup>
+</select>     
+    
+    
+    
+--------------------------------------------------------------------------------------
+    
+  
+   <label for="job">Affected Applications:</label>
+<select id="job" name="field4">
+    
+<optgroup label="Affected Application">
+  <option value="sap">SAP</option>
+  <option value="servicenow">Service Now</option>
+  <option value="microsoft">Microsoft</option>
+ </optgroup>
+</select>     
+    
+    
+    
+    
+--------------------------------------------------------------------------------------
     
 <input type="text" name="field1" placeholder="Your Name *">
 <input type="email" name="field2" placeholder="Your Email *">
@@ -69,9 +99,9 @@
 </fieldset>
 <fieldset>
 <legend><span class="number">2</span> Additional Info</legend>
-<textarea name="field3" placeholder="About Your School"></textarea>
+<textarea name="field3" placeholder="TEST"></textarea>
 </fieldset>
-<input type="submit" value="Apply" />
+<input type="submit" value="Send" />
 </form>
 </div>
     
