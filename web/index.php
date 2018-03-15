@@ -28,12 +28,12 @@
 <label for="job">Impact:</label>
 <select id="job" name="field4">
     
-<optgroup label="Impact">
+
   <option value="critical">1 - Critical</option>
   <option value="high">2 - High</option>
   <option value="medium">3 - Medium</option>
   <option value="low">4 - Low</option>
-</optgroup>
+
 </select>   
     
     
@@ -42,11 +42,11 @@
 <label for="job">Urgency:</label>
 <select id="job" name="field4">
     
-<optgroup label="Urgency">
+
   <option value="high">1 - High</option>
   <option value="medium">2 - Medium</option>
   <option value="low">3 - Low</option>
- </optgroup>
+ 
 </select>       
     
 --------------------------------------------------------------------------------------
@@ -54,11 +54,11 @@
    <label for="job">Priority:</label>
 <select id="job" name="field4">
     
-<optgroup label="Priority">
+
   <option value="high">1 - High</option>
   <option value="medium">2 - Medium</option>
   <option value="low">3 - Low</option>
- </optgroup>
+ 
 </select>     
     
     
@@ -68,8 +68,6 @@
   
    <label for="job">Affected Applications:</label>
 <select id="job" name="field4">
-    
-
   <option value="sap">SAP</option>
   <option value="servicenow">Service Now</option>
   <option value="microsoft">Microsoft</option>
