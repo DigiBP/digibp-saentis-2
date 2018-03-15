@@ -20,37 +20,40 @@
     
     <form class="form-horizontal">
 
-<div class="form-style-3">
-  <form>
-    <fieldset>
-      <legend>Personal</legend>
-      <label for="field1"><span>Name <span class="required">*</span></span>
-        <input class="input-field" type="text" name="field1" value=""/>
-      </label>
-      <label for="field2"><span>Email <span class="required">*</span></span>
-        <input class="input-field" type="email" name="field2" value=""/>
-      </label>
-      <label for="field3"><span>Phone <span class="required">*</span></span>
-        <input class="input-field" type="text" name="field3" value=""/>
-      </label>
-      <label for="field4"><span>Subject</span>
-        <select class="select-field" name="field4">
-          <option value="Appointment">Appointment</option>
-          <option value="Interview">Interview</option>
-          <option value="Regarding a post">Regarding a post</option>
-        </select>
-      </label>
-    </fieldset>
-    <fieldset>
-      <legend>Message</legend>
-      <label for="field6"><span>Message <span class="required">*</span></span>
-        <textarea class="textarea-field" name="field6"></textarea>
-      </label>
-      <label><span> </span>
-        <input type="submit" value="Submit"/>
-      </label>
-    </fieldset>
-  </form>
+<div class="form-style-5">
+<form>
+<fieldset>
+<legend><span class="number">1</span> Candidate Info</legend>
+<input type="text" name="field1" placeholder="Your Name *">
+<input type="email" name="field2" placeholder="Your Email *">
+<textarea name="field3" placeholder="About yourself"></textarea>
+<label for="job">Interests:</label>
+<select id="job" name="field4">
+<optgroup label="Indoors">
+  <option value="fishkeeping">Fishkeeping</option>
+  <option value="reading">Reading</option>
+  <option value="boxing">Boxing</option>
+  <option value="debate">Debate</option>
+  <option value="gaming">Gaming</option>
+  <option value="snooker">Snooker</option>
+  <option value="other_indoor">Other</option>
+</optgroup>
+<optgroup label="Outdoors">
+  <option value="football">Football</option>
+  <option value="swimming">Swimming</option>
+  <option value="fishing">Fishing</option>
+  <option value="climbing">Climbing</option>
+  <option value="cycling">Cycling</option>
+  <option value="other_outdoor">Other</option>
+</optgroup>
+</select>      
+</fieldset>
+<fieldset>
+<legend><span class="number">2</span> Additional Info</legend>
+<textarea name="field3" placeholder="About Your School"></textarea>
+</fieldset>
+<input type="submit" value="Apply" />
+</form>
 </div>
     
 
