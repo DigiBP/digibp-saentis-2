@@ -21,7 +21,7 @@
     <form class="form-horizontal">
 
 <!--Rahmen ür Input  -->
-
+<div class="wrap">
 
 
   <div>
@@ -31,7 +31,7 @@
     
       
   <div> 
-      <label for="impact">Impcat</label>
+      <label for="impact">Impact</label>
     <select class="cool" id="impact" type="text">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
@@ -52,7 +52,7 @@
     <label for="email">Enter your EMail adress here</label>
     <input id="email" type="text" class="cool"/>
   </div>
-  
+    </div>
     
 
 </form>
