@@ -52,8 +52,9 @@
     <label for="email">Enter your EMail adress here</label>
     <input id="email" type="text" class="cool"/>
   </div>
+    </select>
 </div>
-
+    
 
 </form>
     
