@@ -170,7 +170,7 @@ $data_string = '{
   }
 }';
     
-    var_dumb($data_string);
+    var_dump($data_string);
     
 
 callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/Overall/start", $data_string);
