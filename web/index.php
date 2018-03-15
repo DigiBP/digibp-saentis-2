@@ -20,17 +20,17 @@
     
     <form class="form-horizontal">
 
+<!--Rahmen ür Input  -->
 <div class="wrap">
 
   <div>
     <label for="fname">First Name</label>
     <input id="fname" type="text" class="cool"/>
   </div>
-
     
-    <div>
-  <label class="col-md-4 control-label" for="impact">Impcat</label>
-  
+      
+  <div> 
+      <label class="impact" for="impact">Impcat</label>
     <select id="impact" name="impact" class="form-control">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
@@ -38,20 +38,10 @@
       <option value="4">4 - Low</option>
     </select>
   </div>
-    </div>
 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    ---------------------
     
   <div>
     <label for="lname">Last Name</label>
