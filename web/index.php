@@ -30,7 +30,7 @@
     
       
   <div> 
-      <label class="cool" for="impact">Impcat</label>
+      <label for="impact">Impcat</label>
     <select id="impact" name="impact" class="cool">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
@@ -47,7 +47,7 @@
   </div>
   
   <div>
-    <label for="email">Some Long Copy Goes Here</label>
+    <label for="email">Enter your EMail adress here</label>
     <input id="email" type="text" class="cool"/>
   </div>
 </div>
