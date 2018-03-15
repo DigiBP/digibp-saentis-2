@@ -21,7 +21,7 @@
     <form class="form-horizontal">
 
 <!--Rahmen ür Input  -->
-<div class="wrap">
+
 
 
   <div>
@@ -52,8 +52,7 @@
     <label for="email">Enter your EMail adress here</label>
     <input id="email" type="text" class="cool"/>
   </div>
-    
-</div>
+  
     
 
 </form>
