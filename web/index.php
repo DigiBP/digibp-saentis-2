@@ -82,21 +82,29 @@
 <textarea name="field3" placeholder="SytemID"></textarea>
     
 -------------------------------------------------------------------------------------- 
+ <label for="job">Summary:</label>  
+<textarea name="field3" placeholder="Pease write an short summary"></textarea>
 
-<textarea name="field3" placeholder="Pease describe your isse here"></textarea>
+--------------------------------------------------------------------------------------
+<label for="job">Description of Issue:</label>  
+<textarea name="field3" placeholder="Please describe your issue here"></textarea>
+--------------------------------------------------------------------------------------
+<label for="job">Provide an detailed step-by-step Description:</label>  
+<textarea name="field3" placeholder="Provide detailed Step-by-Step Description"></textarea>
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------
-<input type="text" name="field1" placeholder="Your Name *">
-<input type="email" name="field2" placeholder="Your Email *">
-<textarea name="field3" placeholder="About yourself"></textarea>
 
 </fieldset>
 <fieldset>
-<legend><span class="number">2</span> Additional Info</legend>
-<textarea name="field3" placeholder="TEST"></textarea>
+<legend><span class="number">2</span> Please provide some information about you.</legend>
+<label for="job">Name:</label>  
+<input type="text" name="field1" placeholder="Your Name *">
+<label for="job">E-Mail:</label>  
+<input type="email" name="field2" placeholder="Your Email *">
+
+<label for="job">Additional Information:</label>  
+<textarea name="field3" placeholder="Additional Iformation"></textarea>
 </fieldset>
 <input type="submit" value="Send" />
 </form>
