@@ -22,7 +22,7 @@
 
 <!--Rahmen ür Input  -->
 <div class="wrap">
-<select class="select">
+
 
   <div>
     <label for="fname">First Name</label>
@@ -52,7 +52,7 @@
     <label for="email">Enter your EMail adress here</label>
     <input id="email" type="text" class="cool"/>
   </div>
-    </select>
+    
 </div>
     
 
