@@ -19,7 +19,6 @@
     <h1>Incident Creation</h1>
     
     <form class="form-horizontal">
-<fieldset>
 
 <div class="wrap">
 
@@ -39,7 +38,7 @@
   </div>
 </div>
 
-</fieldset>
+
 </form>
     
         </ul>
