@@ -25,7 +25,7 @@
 <fieldset>
 <legend><span class="number">1</span> Incident Info </legend>
     
-<label for="job">Interests:</label>
+<label for="job">Impact:</label>
 <select id="job" name="field4">
     
 <optgroup label="Impact">
@@ -38,6 +38,19 @@
     
     
 --------------------------------------------------------------------------------------
+    
+<label for="job">Urgency:</label>
+<select id="job" name="field4">
+    
+<optgroup label="Urgency">
+  <option value="football">1 - High</option>
+  <option value="swimming">2 - Medium</option>
+  <option value="fishing">3 - Low</option>
+ </optgroup>
+</select>       
+    
+-------------------------------------------------------------------------------------
+    
 <input type="text" name="field1" placeholder="Your Name *">
 <input type="email" name="field2" placeholder="Your Email *">
 <textarea name="field3" placeholder="About yourself"></textarea>
