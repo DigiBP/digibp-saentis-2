@@ -164,7 +164,7 @@ $data_string = '{
       "type": "String"
     },
     "ticketOrigin": {
-      "value": "EMA'.$_POST['ticketOrigin'].'IL",
+      "value": "OnlineTicket",
       "type": "String"
     }
   }
