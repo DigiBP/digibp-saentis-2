@@ -22,6 +22,7 @@
 
 <!--Rahmen ür Input  -->
 <div class="wrap">
+<select class="select">
 
   <div>
     <label for="fname">First Name</label>
