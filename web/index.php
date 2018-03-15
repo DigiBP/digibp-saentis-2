@@ -30,16 +30,16 @@
     
       
   <div> 
-      <label for="impact">Impcat</label>
+      <label for="impact">Impcat
     <select id="impact" type="text" class="cool">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
       <option value="3">3 - Medium</option>
       <option value="4">4 - Low</option>
     </select>
+    </label>
   </div>
 
-    
     
     
   <div>
