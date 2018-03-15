@@ -29,16 +29,7 @@
 <textarea name="field3" placeholder="About yourself"></textarea>
 <label for="job">Interests:</label>
 <select id="job" name="field4">
-<optgroup label="Indoors">
-  <option value="fishkeeping">Fishkeeping</option>
-  <option value="reading">Reading</option>
-  <option value="boxing">Boxing</option>
-  <option value="debate">Debate</option>
-  <option value="gaming">Gaming</option>
-  <option value="snooker">Snooker</option>
-  <option value="other_indoor">Other</option>
-</optgroup>
-<optgroup label="Outdoors">
+<optgroup label="Impact">
   <option value="football">Football</option>
   <option value="swimming">Swimming</option>
   <option value="fishing">Fishing</option>
