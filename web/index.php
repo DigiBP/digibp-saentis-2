@@ -31,7 +31,7 @@
       
   <div> 
       <label class="impact" for="impact">Impcat</label>
-    <select id="impact" name="impact" class="wrap">
+    <select id="impact" name="impact" class="cool">
       <option value="1">1 - Critical</option>
       <option value="2">2 - High</option>
       <option value="3">3 - Medium</option>
@@ -40,8 +40,6 @@
   </div>
 
     
-    
-    ---------------------
     
   <div>
     <label for="lname">Last Name</label>
