@@ -153,7 +153,7 @@ $data_string = '{
       "type": "String"
     },
      "isReallyIncident": {
-      "value": "'.$_POST['isreallyincident'].'",
+      "value": "isReallyIncident",
       "type": "String"
   },
 }';
