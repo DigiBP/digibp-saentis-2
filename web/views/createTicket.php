@@ -152,6 +152,10 @@ $data_string = '{
       "value": "OnlineTicket",
       "type": "String"
     }
+    "isReallyIncident": {
+      "value": "'.$_POST['isreallyincident'].'",
+      "type": "String"
+    },
   }
 }';
     
