@@ -161,9 +161,13 @@ $data_string = '{
     
     var_dump($data_string);
     
+    if (!empty($_POST)){
+        
+    
 
 callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", $data_string);
 
+    }
 function callCamundaAPI($url, $data_string){
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
