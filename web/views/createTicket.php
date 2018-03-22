@@ -8,6 +8,9 @@
 
 </head>
 
+<body>
+<h3>Incident Creation </h3>
+<div class="container">
 <h3>Incident Creation </h3>
 <form role="form"
    name="variablesForm">
@@ -95,7 +98,6 @@
    </div>
    <!-- row -->
 </form>
-   <!-- row -->
 
 <?php
 
