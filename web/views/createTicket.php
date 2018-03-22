@@ -155,7 +155,7 @@ $data_string = '{
      "isReallyIncident": {
       "value": "isReallyIncident",
       "type": "String"
-  },
+  }
 }';
     
     var_dump($data_string);
