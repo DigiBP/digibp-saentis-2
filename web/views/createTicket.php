@@ -155,7 +155,7 @@ $data_string = '{
      "isReallyIncident": {
       "value": "'.$_POST['isreallyincident'].'",
       "type": "String"
-  }
+  },
 }';
     
     var_dump($data_string);
