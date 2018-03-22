@@ -151,7 +151,7 @@ $data_string = '{
     "ticketOrigin": {
       "value": "OnlineTicket",
       "type": "String"
-    }
+    },
      "isReallyIncident": {
       "value": "'.$_POST['isreallyincident'].'",
       "type": "String"
