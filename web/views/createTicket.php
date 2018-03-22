@@ -11,7 +11,6 @@
 <body>
 <h3>Incident Creation </h3>
 <div class="container">
-<h3>Incident Creation </h3>
 <form role="form"
    name="variablesForm">
    <div class="row">
@@ -96,8 +95,9 @@
          </div>
       </div><!-- col-xs-6 -->
    </div>
-   <!-- row -->
+   <input type="submit" value="Submit">
 </form>
+   <!-- row -->
 
 <?php
 
@@ -152,10 +152,9 @@ $data_string = '{
       "value": "OnlineTicket",
       "type": "String"
     }
-    "isReallyIncident": {
+     "isReallyIncident": {
       "value": "'.$_POST['isreallyincident'].'",
       "type": "String"
-    },
   }
 }';
     
