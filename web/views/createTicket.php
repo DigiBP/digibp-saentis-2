@@ -9,10 +9,14 @@
 </head>
 
 <body>
-<h3>Incident Creation </h3>
+
 <div class="container">
+	 <h3>Incident Creation </h3>
+     
 <form role="form"
-   name="variablesForm">
+   name="variablesForm" method="POST">
+
+
    <div class="row">
       <div class="col-xs-6">
          <h2>Please provide some information about your Incident.</h2>
@@ -159,15 +163,25 @@ $data_string = '{
 }
 }';
     
-    var_dump($data_string);
-    
-    if (!empty($_POST)){
-        
-    
+    //var_dump($data_string);
 
-callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
+// If form was submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+     
+	$result = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
+      
+ 	// Success
+ 	if (strpos($result, 'definitionId') !== false) {
+ 	     	echo 'true';
+ 	} else{
+    	  	// Fail Error
+    	  	echo 'fail!';
+    	  	var_dump($result);
+ 	}
+}
 
-    }
+
+// Method
 function callCamundaAPI($url, $type, $data_string){
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $type);
