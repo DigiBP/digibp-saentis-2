@@ -7,6 +7,7 @@ $processInstances = callCamundaAPI("https://saentisincident.herokuapp.com/rest/p
 $arrProcessInstances = json_decode($processInstances, true);
  print_r($arrProcessInstances);        // D
  echo '<br /><br /><br />';
+ echo $arrProcessInstances["id"];
 var_dump($processInstances);
 // Variables
 //https://saentisincident.herokuapp.com/rest/process-instance/d322ef06-38e8-11e8-98ba-72f9e2b639dc/activity-instances
