@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Säntis - Ticket Status</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
 <?php
 
 echo '<h2>Display ticket status</h2>';
@@ -94,4 +106,5 @@ function callCamundaAPI($url, $type, $data_string){
 
 
 ?>
-
+</body>
+</html>
