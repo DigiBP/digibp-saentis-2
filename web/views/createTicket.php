@@ -165,12 +165,12 @@ $data_string = '{
         
     
 
-callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", $data_string);
+callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
 
     }
-function callCamundaAPI($url, $data_string){
+function callCamundaAPI($url, $type, $data_string){
         $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $type);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -179,6 +179,7 @@ function callCamundaAPI($url, $data_string){
         );
 
         $result = curl_exec($ch);
+	  return $result;
 	  var_dump($result);
 
 }
