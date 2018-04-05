@@ -81,7 +81,7 @@
          <div class="form-group">
             <label for="customerMail">E-Mail</label>
             <div class="controls">
-               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerName" placeholder="email@domain.com" />
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerMail" placeholder="email@domain.com" />
             </div>
          </div>
           
