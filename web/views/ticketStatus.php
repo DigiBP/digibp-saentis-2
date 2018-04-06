@@ -95,11 +95,11 @@ fclose($fp);
 $instancesDetails[0]['ticketOrigin']['value'];
 
 // Output
-foreach($arrInstancesDetails as $detail){
+/*foreach($arrInstancesDetails as $detail){
 	echo 'Origin: '.$detail['ticketOrigin']['value'].'<br />';
 	echo 'Status: '.$detail['ticketStatus']['value'].'<br />';
 
-}
+}*/
 
 // Methods
 function callCamundaAPI($url, $type, $data_string){
