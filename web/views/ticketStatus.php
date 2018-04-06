@@ -20,13 +20,13 @@ echo '<h2>Display ticket status</h2>';
 echo '<h2>List of Instances</h2>';
 
 // Get Process IDs
-$processInstances = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance", "GET");
+$processInstances = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance", "GET", NULL);
 
 // Convert JSON to array
 $arrProcessInstances = json_decode($processInstances, true);
 
 // Debug Output
-//print_r($arrProcessInstances); 
+print_r($arrProcessInstances); 
 
 // Iterature trough IDs and get 
 foreach($arrProcessInstances as $instance ){
@@ -41,7 +41,7 @@ foreach($arrProcessInstances as $instance ){
 echo '<h2>List of Instances with Variables</h2>';
 
 for ($i = 0; $i < 20; $i++) {
-	$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET");
+	$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET", NULL);
 	
 	// Convert JSON to array (Not necessary, returns array!)
 	$arrInstancesDetails = json_decode($instancesDetails, true);
@@ -94,11 +94,12 @@ function callCamundaAPI($url, $type, $data_string){
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $type);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen($data_string))
-        );
-
+	  if(!empty($data_string)){
+        	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                	'Content-Type: application/json',
+             	'Content-Length: ' . strlen($data_string))
+        	);
+	  }
         $result = curl_exec($ch);
 	  return $result;
 
