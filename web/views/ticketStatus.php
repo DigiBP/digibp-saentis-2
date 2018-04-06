@@ -95,7 +95,7 @@ fclose($fp);
 $instancesDetails[0]['ticketOrigin']['value'];
 
 // Output
-foreach($instancesDetails as $detail){
+foreach($arrInstancesDetails as $detail){
 	echo 'Origin: '.$detail['ticketOrigin']['value'].'<br />';
 	echo 'Status: '.$detail['ticketStatus']['value'].'<br />';
 
@@ -105,9 +105,10 @@ foreach($instancesDetails as $detail){
 function callCamundaAPI($url, $type, $data_string){
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $type);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	  if(!empty($data_string)){
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 	'Content-Type: application/json',
              	'Content-Length: ' . strlen($data_string))
