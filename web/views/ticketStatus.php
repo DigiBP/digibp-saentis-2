@@ -17,13 +17,13 @@
 /* *********************************************************
  * List JSON Files
  *  ****************************************************** */
-echo '<h2>JSON File name</h2>';
+/*echo '<h2>JSON File name</h2>';
 $dir    = './';
 $files1 = scandir($dir);
 $files2 = scandir($dir, 1);
 
 print_r($files1);
-print_r($files2);
+print_r($files2);*/
 
 echo '<h2>Display ticket status</h2>';
 
@@ -39,7 +39,7 @@ $processInstances = callCamundaAPI("https://saentisincident.herokuapp.com/rest/p
 $arrProcessInstances = json_decode($processInstances, true);
 
 // Debug Output
-print_r($arrProcessInstances); 
+//print_r($arrProcessInstances); 
 
 // Iterature trough IDs and get 
 foreach($arrProcessInstances as $instance ){
@@ -69,8 +69,12 @@ for ($i = 0; $i < 20; $i++) {
 	}
 }
 
+// JSON output
+header('Content-Type: application/json');
+echo json_encode($allInstances);
+
 // Debug Output
-print_r($allInstances);
+//print_r($allInstances);
 
 // Save JSON as file
 $jsonFile = json_encode($allInstances);
@@ -92,7 +96,7 @@ fclose($fp);
 
 
 // Test Output
-$instancesDetails[0]['ticketOrigin']['value'];
+//$instancesDetails[0]['ticketOrigin']['value'];
 
 // Output
 /*foreach($arrInstancesDetails as $detail){
