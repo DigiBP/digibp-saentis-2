@@ -44,7 +44,7 @@ $arrProcessInstances = json_decode($processInstances, true);
 // Iterature trough IDs and get 
 foreach($arrProcessInstances as $instance ){
  	//echo 'test: '.$arrProcessInstances[0]['id'];
- 	echo $instance['id'].'<br />';
+ 	//echo $instance['id'].'<br />';
 	$instances[] = $instance['id'];
 }
 
@@ -53,6 +53,7 @@ foreach($arrProcessInstances as $instance ){
  *  ****************************************************** */
 echo '<h2>List of Instances with Variables</h2>';
 
+$ticketStatus = NULL;
 for ($i = 0; $i < 20; $i++) {
 	$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET", NULL);
 	
@@ -68,11 +69,14 @@ for ($i = 0; $i < 20; $i++) {
 		//echo 'This is it: '.$arrInstancesDetails['ticketStatus']['value'];
 	}
 }
+print_r($ticketStatus);
+
 
 // JSON output
 header('Content-Type: application/json');
-echo json_encode($allInstances);
+echo json_encode($ticketStatus);
 
+/*
 // Debug Output
 //print_r($allInstances);
 
@@ -81,7 +85,7 @@ $jsonFile = json_encode($allInstances);
 $date = date('Y-m-d-H-i-s');
 $fp = fopen('results'.$date.'.json', 'w');
 fwrite($fp, json_encode($allInstances, JSON_UNESCAPED_SLASHES));
-fclose($fp);
+fclose($fp);*/
 
 // Iterate and save in array
 /*foreach($instancesDetails as $inst){
@@ -91,8 +95,6 @@ fclose($fp);
 }*/
 
 //print_r($instancesDetails);
-
-
 
 
 // Test Output
@@ -126,48 +128,7 @@ function callCamundaAPI($url, $type, $data_string){
 
 ?>
 
-<?php
- 
-$dataPoints = array(
-	array("x"=> 10, "y"=> 41),
-	array("x"=> 20, "y"=> 35, "indexLabel"=> "Lowest"),
-	array("x"=> 30, "y"=> 50),
-	array("x"=> 40, "y"=> 45),
-	array("x"=> 50, "y"=> 52),
-	array("x"=> 60, "y"=> 68),
-	array("x"=> 70, "y"=> 38),
-	array("x"=> 80, "y"=> 71, "indexLabel"=> "Highest"),
-	array("x"=> 90, "y"=> 52),
-	array("x"=> 100, "y"=> 60),
-	array("x"=> 110, "y"=> 36),
-	array("x"=> 120, "y"=> 49),
-	array("x"=> 130, "y"=> 41)
-);
-	
-?>
-<script>
-window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	exportEnabled: true,
-	theme: "light1", // "light1", "light2", "dark1", "dark2"
-	title:{
-		text: "Simple Column Chart with Index Labels"
-	},
-	data: [{
-		type: "column", //change type to bar, line, area, pie, etc
-		//indexLabel: "{y}", //Shows y value on all Data Points
-		indexLabelFontColor: "#5A5757",
-		indexLabelPlacement: "outside",   
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
- 
-}
-</script>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
 </body>
 </html>
