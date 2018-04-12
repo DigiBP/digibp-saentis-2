@@ -13,7 +13,7 @@
 <ul>
 <li><a href="./views/createTicket.php">Create Ticket (Webform)</a></li>
 <li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
-<li><a href="./views/ticketDashboard.php">Ticket Dashboard (Overall)</a></li>
+<li><a href="./views/ticketDashboard.php">Ticket Dashboard (Tableau)</a></li>
 
  
 

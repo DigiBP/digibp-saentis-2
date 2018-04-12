@@ -11,7 +11,7 @@
 <body>
 
 <div class="container">
-	 <h3>Incident Creation </h3>
+	 <h2>Incident Creation </h2>
      
 <form role="form"
    name="variablesForm" method="POST">
@@ -19,12 +19,12 @@
 
    <div class="row">
       <div class="col-xs-6">
-         <h2>Please provide some information about your Incident.</h2>
+         <h4>Please provide some information about your Incident.</h4>
            <!-- Priority -->
          <div class="form-group">
             <label for="priority">Priority</label>
             <div class="controls">
-               <select cam-variable-name="priority" 
+               <select class="form-control" cam-variable-name="priority" 
                   cam-variable-type="String" 
                   name="priority">
                   <option>1 - High</option>
@@ -37,7 +37,7 @@
          <div class="form-group">
             <label for="affectedApplication">Affected Application</label>
             <div class="controls">
-               <select cam-variable-name="affectedApplication" 				cam-variable-type="String" name="affectedApplication">
+               <select class="form-control" cam-variable-name="affectedApplication" 				cam-variable-type="String" name="affectedApplication">
                   <option>none</option>
                   <option>Excel</option>
                   <option>Word</option>
@@ -49,34 +49,19 @@
             </div>
          </div>
        
-         <!-- Summary -->
-         <div class="form-group">
-            <label for="summary">Summary</label>
-            <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="summary" name="summary" placeholder="Please describe your issue here"></textarea>
-            </div>
-         </div>
-         <!-- Description of Issue -->
-         <div class="form-group">
-            <label for="description">Description of Issue</label>
-            <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="description" name="description" placeholder="Please describe your issue here"></textarea>
-            </div>
-         </div>
-                  
 
     
       </div>
       <!-- close col div -->
       <div class="col-xs-6">
-         <h2>Please provide some information about you.</h2>
+         <h4>Please provide some information about you.</h4>
    
           
             <!-- Customer Name  -->
          <div class="form-group">
             <label for="customerMail">Customer Name</label>
             <div class="controls">
-               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder="Please enter yuor name here" />
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder="Please enter your name here" />
             </div>
          </div>
           
@@ -99,7 +84,23 @@
          </div>
       </div><!-- col-xs-6 -->
    </div>
-   <input type="submit" value="Submit">
+   <!-- Summary -->
+   <div class="form-group">
+      <label for="summary">Summary</label>
+      <div class="controls">
+         <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="summary" name="summary" placeholder="Please describe your issue here"></textarea>
+      </div>
+   </div>
+   <!-- Description of Issue -->
+   <div class="form-group">
+      <label for="description">Description of Issue</label>
+      <div class="controls">
+         <textarea rows="7" class="form-control mytext" cam-variable-type="String" required cam-variable-name="description" name="description" placeholder="Please describe your issue here"></textarea>
+      </div>
+   </div>
+            
+   
+   <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"><br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
 </form>
    <!-- row -->
 
