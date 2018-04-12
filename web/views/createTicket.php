@@ -9,9 +9,110 @@
 </head>
 
 <body>
+	
 
 <div class="container">
 	 <h2>Incident Creation </h2>
+	 
+	 <?php
+
+	 // Create JSON
+	 $data_string = '{
+	   "variables": {
+	     "impact": {
+	       "value": "'.$_POST['impact'].'",
+	       "type": "String"
+	     },
+	     "urgency": {
+	       "value": "'.$_POST['urgency'].'",
+	       "type": "String"
+	     },
+	     "affectedApplication": {
+	       "value": "'.$_POST['affectedApplication'].'",
+	       "type": "String"
+	     },
+	     "summary": {
+	       "value": "'.$_POST['summary'].'",
+	       "type": "String"
+	     },
+	     "description": {
+	       "value": "'.$_POST['description'].'",
+	       "type": "String"
+	     },
+	     "SystemID": {
+	       "value": "'.$_POST['SystemID'].'",
+	       "type": "String"
+	     },
+	     "stepByStep": {
+	       "value": "'.$_POST['stepByStep'].'",
+	       "type": "String"
+	     },
+	     "customerName": {
+	       "value": "'.$_POST['customerName'].'",
+	       "type": "String"
+	     },
+	     "customerMail": {
+	       "value": "'.$_POST['customerMail'].'",
+	       "type": "String"
+	     },
+	     "customerPhone": {
+	       "value": "'.$_POST['customerPhone'].'",
+	       "type": "String"
+	     },
+	     "ticketStatus": {
+	       "value": "'.$_POST['ticketStatus'].'",
+	       "type": "String"
+	     },
+	     "ticketOrigin": {
+	       "value": "OnlineTicket",
+	       "type": "String"
+	     },
+	      "isReallyIncident": {
+	       "value": "isReallyIncident",
+	       "type": "String"
+	   }
+	 }
+	 }';
+    
+	     //var_dump($data_string);
+
+	 // If form was submitted
+	 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+     
+	 	$result = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
+      
+	  	// Success
+	  	if (strpos($result, 'definitionId') !== false) {
+	  	     	echo '<div class="alert alert-success">';
+	   		echo '<strong>Success!</strong> Your Incident was successfully created.';
+	 		echo '</div>';
+	  	} else{
+	     	  	// Fail Error
+	     	  	echo 'fail!';
+	     	  	var_dump($result);
+	  	}
+	 }
+
+
+	 // Method
+	 function callCamundaAPI($url, $type, $data_string){
+	         $ch = curl_init($url);
+	         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $type);
+	         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+	         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+	                 'Content-Type: application/json',
+	                 'Content-Length: ' . strlen($data_string))
+	         );
+
+	         $result = curl_exec($ch);
+	 	  return $result;
+	 	  var_dump($result);
+
+	 }
+
+
+	 ?>
      
 <form role="form"
    name="variablesForm" method="POST">
@@ -100,107 +201,11 @@
    </div>
             
    
-   <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"><br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
+   <input class="btn btn-primary btn-lg btn-block" type="submit" value="Create Ticket"><br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
 </form>
    <!-- row -->
 
-<?php
 
-// Create JSON
-$data_string = '{
-  "variables": {
-    "impact": {
-      "value": "'.$_POST['impact'].'",
-      "type": "String"
-    },
-    "urgency": {
-      "value": "'.$_POST['urgency'].'",
-      "type": "String"
-    },
-    "affectedApplication": {
-      "value": "'.$_POST['affectedApplication'].'",
-      "type": "String"
-    },
-    "summary": {
-      "value": "'.$_POST['summary'].'",
-      "type": "String"
-    },
-    "description": {
-      "value": "'.$_POST['description'].'",
-      "type": "String"
-    },
-    "SystemID": {
-      "value": "'.$_POST['SystemID'].'",
-      "type": "String"
-    },
-    "stepByStep": {
-      "value": "'.$_POST['stepByStep'].'",
-      "type": "String"
-    },
-    "customerName": {
-      "value": "'.$_POST['customerName'].'",
-      "type": "String"
-    },
-    "customerMail": {
-      "value": "'.$_POST['customerMail'].'",
-      "type": "String"
-    },
-    "customerPhone": {
-      "value": "'.$_POST['customerPhone'].'",
-      "type": "String"
-    },
-    "ticketStatus": {
-      "value": "'.$_POST['ticketStatus'].'",
-      "type": "String"
-    },
-    "ticketOrigin": {
-      "value": "OnlineTicket",
-      "type": "String"
-    },
-     "isReallyIncident": {
-      "value": "isReallyIncident",
-      "type": "String"
-  }
-}
-}';
-    
-    //var_dump($data_string);
-
-// If form was submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-     
-	$result = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
-      
- 	// Success
- 	if (strpos($result, 'definitionId') !== false) {
- 	     	echo 'true';
- 	} else{
-    	  	// Fail Error
-    	  	echo 'fail!';
-    	  	var_dump($result);
- 	}
-}
-
-
-// Method
-function callCamundaAPI($url, $type, $data_string){
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $type);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen($data_string))
-        );
-
-        $result = curl_exec($ch);
-	  return $result;
-	  var_dump($result);
-
-}
-
-
-?>
 </div>
 </body>
 </html>

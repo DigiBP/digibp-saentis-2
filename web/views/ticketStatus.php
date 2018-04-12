@@ -18,8 +18,9 @@
 
 
    <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-8">
          <h4>Please provide your e-mail adress you used when creating the ticket.</h4>
+	   This might take a moment, please be patient.
            <!-- Priority -->
          <div class="form-group">
             <label for="email">E-Mail</label>
@@ -28,93 +29,70 @@
             </div>
          </div>
          
-   <input type="submit" class="btn btn-primary btn-lg" value="Submit">
+   <input type="submit" class="btn btn-primary btn-lg btn-block" value="Check Ticket Status">
 </form>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-//echo '<h2>Display ticket status</h2>';
-
-/* *********************************************************
- * Get Process Instances
- *  ****************************************************** */
-//echo '<h2>List of Instances</h2>';
-
-// Get Process IDs
-$processInstances = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance", "GET", NULL);
-
-// Convert JSON to array
-$arrProcessInstances = json_decode($processInstances, true);
-
-// Debug Output
-//print_r($arrProcessInstances); 
-
-// Iterature trough IDs and get 
-foreach($arrProcessInstances as $instance ){
- 	//echo 'test: '.$arrProcessInstances[0]['id'];
- 	//echo $instance['id'].'<br />';
-	$instances[] = $instance['id'];
-}
-
-/* *********************************************************
- * Get Process Variables from retrived Instances
- *  ****************************************************** */
-echo '<h2>List of Instances with Variables</h2>';
-
-$ticketStatus = NULL;
-for ($i = 0; $i < 20; $i++) {
-	$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET", NULL);
+	/* *********************************************************
+	 * Get Process Instances
+	 *  ****************************************************** */
 	
-	// Convert JSON to array (Not necessary, returns array!)
-	$arrInstancesDetails = json_decode($instancesDetails, true);
-	
-	// Save all information into array
-	$allInstances[$i][$instances[$i]] = $instancesDetails;
-	
-	// Get Ticket Status Summary (only if it is set)
-	echo '<table class="table" width="100%"><tr>';
-	if($arrInstancesDetails['customerMail']['value'] === $_POST['email']){
-		// Get ID of instance
-		echo '<td>'.$instances[$i].'<td />';
-		echo '<td>'.$arrInstancesDetails['customerMail']['value'].'<td />';
-		echo '<td>'.$arrInstancesDetails['ticketStatus']['value'].'<td />'; 
-		
-		
-		//$ticketStatus[] = $arrInstancesDetails['customerMail']['value'];
-		//echo 'This is it: '.$arrInstancesDetails['ticketStatus']['value'];
+	// Get Process IDs
+	$processInstances = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance", "GET", NULL);
+
+	// Convert JSON to array
+	$arrProcessInstances = json_decode($processInstances, true);
+
+	// Debug Output
+	//print_r($arrProcessInstances); 
+
+	// Iterature trough IDs and get 
+	foreach($arrProcessInstances as $instance ){
+	 	//echo 'test: '.$arrProcessInstances[0]['id'];
+	 	//echo $instance['id'].'<br />';
+		$instances[] = $instance['id'];
 	}
-	echo '</td></tr>';
-}
-print_r($allInstances);
 
-/*
-// Save JSON as file
-$jsonFile = json_encode($allInstances);
-$date = date('Y-m-d-H-i-s');
-$fp = fopen('results'.$date.'.json', 'w');
-fwrite($fp, json_encode($allInstances, JSON_UNESCAPED_SLASHES));
-fclose($fp);*/
+	/* *********************************************************
+	 * Get Process Variables from retrived Instances
+	 *  ****************************************************** */
+	echo '<h2>List of Instances with Variables</h2>';
 
-// Iterate and save in array
-/*foreach($instancesDetails as $inst){
-	//echo 'Origin: '.$inst['ticketOrigin']['value'].'<br />';
-	//echo 'Status: '.$detail['ticketStatus']['value'].'<br />';
+	for ($i = 0; $i < 20; $i++) {
+		$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET", NULL);
+	
+		// Convert JSON to array (Not necessary, returns array!)
+		$arrInstancesDetails = json_decode($instancesDetails, true);
+	
+		// Save all information into array
+		$allInstances[$i][$instances[$i]] = $instancesDetails;
+	
+	}
+	print_r($allInstances);
+	
+	/* *********************************************************
+	 * Display Ticket per E-Mail 
+	 *  ****************************************************** */
+	echo '<table class="table" width="100%">';
+	echo '<tr><th>ID</th><th>Summary</th><th>E-Mail</th><th>Ticket Status</th></tr>';
+	for($i = 0; $i < 20; $i++){
+		
+		// Get Ticket Status Summary (only if it is set)
+	
+		if($arrInstancesDetails['customerMail']['value'] === $_POST['email']){
+			// Get ID of instance
+			echo '<tr><td>'.$instances[$i].'</td>';
+			echo '<td>'.$allInstances['summary']['value'].'</td>';
+			echo '<td>'.$allInstances['customerMail']['value'].'</td>';
+			echo '<td><strong>'.$allInstances['ticketStatus']['value'].'</strong></td>'; 
+			echo '</tr>';
+		}
+	}
+	
+	echo '</table>';
+	//print_r($allInstances);
 
-}*/
-
-//print_r($instancesDetails);
-
-
-// Test Output
-//$instancesDetails[0]['ticketOrigin']['value'];
-
-// Output
-/*foreach($arrInstancesDetails as $detail){
-	echo 'Origin: '.$detail['ticketOrigin']['value'].'<br />';
-	echo 'Status: '.$detail['ticketStatus']['value'].'<br />';
-
-}*/
 }
 
 // Methods
@@ -138,7 +116,7 @@ function callCamundaAPI($url, $type, $data_string){
 
 ?>
 
-
+<br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
 
 </body>
 </html>
