@@ -35,7 +35,8 @@
 </nav>
 
 <div class="container">
-	<br /<br / <h2>Ticket Status</h2>
+	<br /<br />
+	 <h2>Ticket Status</h2>
      
 <form role="form"
    name="variablesForm" method="POST">
