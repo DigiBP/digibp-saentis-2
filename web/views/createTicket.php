@@ -35,7 +35,7 @@
 </nav>	
 
 <div class="container">
-	 <h2>Incident Creation </h2>
+	 <br /><br /<h2>Incident Creation </h2>
 	 
 	 <?php
 
