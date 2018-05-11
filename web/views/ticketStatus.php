@@ -65,10 +65,10 @@
    <div class="row">
       <div class="col-xs-8">
          <h4>Please provide your e-mail adress you used when creating the ticket.</h4>
-	   This might take a moment, please be patient.
+	   This might take a moment, please be patient.<br />
            <!-- Priority -->
          <div class="form-group">
-            <label for="email">E-Mail</label>
+            <label for="email"></label>
             <div class="controls">
                 <input type="email" class="form-control mytext" required  name="email" placeholder="Please enter your email here" />
             </div>
