@@ -32,11 +32,13 @@
      
   </div>
 </nav>
-
+     <div class="container">     <div class="container">
 <br /><br />
 <h2> Welcome to Säntis Incident Management </h2>
 Please choose your desired action from the menu.
+
 <br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
+</div></div>
 </body>
 
 </html>

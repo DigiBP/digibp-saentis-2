@@ -55,7 +55,9 @@
          </div>
          
    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Check Ticket Status">
-</form>  </div>
+   
+   
+</form>  
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -140,8 +142,8 @@ function callCamundaAPI($url, $type, $data_string){
 
 
 ?>
+<br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	</div>
 
-<br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
 
 </body>
 </html>
