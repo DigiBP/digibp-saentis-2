@@ -2,21 +2,37 @@
 <html>
 
 <head>
-  <title>Page Title</title>
-    
-<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <title>Saentis Incident Management</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     
 </head>
 
-    <body>
+<body>
 
-<ul>
-<li><a href="./views/createTicket.php">Create Ticket (Webform)</a></li>
-<li><a href="./views/ticketStatus.php">Check Ticket Status</a></li>
-<li><a href="./views/ticketDashboard.php">Ticket Dashboard (Tableau)</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">SaentisGroup</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
- 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="https://saentisincident-php.herokuapp.com/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./views/createTicket.php">Open new Incident</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./views/ticketStatus.php">Check Incident Status</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./views/ticketDashboard.php">Ticket Dashboard (Tableau) (Admin only)</a>
+      </li>
+     
+  </div>
+</nav>
 
-    </body>
+</body>
 
 </html>
