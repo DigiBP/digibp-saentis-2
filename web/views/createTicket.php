@@ -144,6 +144,7 @@
 
    <div class="row">
       <div class="col-xs-6">
+		<div class="container">
          <h4>Please provide some information about your Incident.</h4>
            <!-- Priority -->
          <div class="form-group">
@@ -172,13 +173,14 @@
 			     <option>SAP</option>
                </select>
             </div>
-         </div>
+         </div></div>
        
 
     
       </div>
       <!-- close col div -->
       <div class="col-xs-6">
+		<div class="container">
          <h4>Please provide some information about you.</h4>
    
           
@@ -208,7 +210,7 @@
             </div>
          </div>
       </div><!-- col-xs-6 -->
-   </div>
+   </div></div>
    <!-- Summary -->
    <div class="form-group">
       <label for="summary">Summary</label>

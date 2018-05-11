@@ -37,7 +37,7 @@
 <div class="container">
 	<br /<br />
 	 <h2>Ticket Status</h2>
-     
+     <div class="container">
 <form role="form"
    name="variablesForm" method="POST">
 
@@ -55,7 +55,7 @@
          </div>
          
    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Check Ticket Status">
-</form>
+</form>  </div>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
