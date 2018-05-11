@@ -55,7 +55,7 @@
 </nav>
 
 <div class="container">
-	<br /<br />
+	<br /><br />
 	 <h2>Ticket Status</h2>
      <div class="container">
 <form role="form"
