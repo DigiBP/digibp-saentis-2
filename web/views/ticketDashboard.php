@@ -23,8 +23,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="https://saentisincident-php.herokuapp.com/">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="https://saentisincident-php.herokuapp.com/">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./createTicket.php">Open new Incident</a>
@@ -32,8 +32,8 @@
       <li class="nav-item">
         <a class="nav-link" href="./ticketStatus.php">Check Incident Status</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./ticketDashboard.php">Ticket Dashboard (Tableau) (Admin only)</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="./ticketDashboard.php">Ticket Dashboard (Tableau) (Admin only) <span class="sr-only">(current)</span></a>
       </li>
      
   </div>
