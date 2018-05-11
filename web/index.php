@@ -40,7 +40,11 @@
      <div class="container">     <div class="container">
 <br /><br />
 <h2> Welcome to Säntis Incident Management </h2>
-Please choose your desired action from the menu.
+Please choose your desired action from the menu.<br /><br />
+<button type="button" class="btn btn-outline-primary"  onclick="location.href='./views/createTicket.php'";>Open new Incident</button><br /><br />
+<button type="button" class="btn btn-outline-secondary"  onclick="location.href='./views/ticketStatus.php'";>Check Incident Status</button><br /><br />
+<button type="button" class="btn btn-outline-info" onclick="location.href='/views/ticketDashboard.php'";>Ticket Dashboard (Admin only)</button><br /><br />
+
 
 <br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
 </div></div>
