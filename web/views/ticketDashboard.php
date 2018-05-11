@@ -38,6 +38,11 @@
      
   </div>
 </nav>
+<div class="container">
+	<br /><br />
+	 <h2>Ticket Dashboard</h2>
+
 <br /> <br /><center><span style="color:#8c8a8a;">&copy; Säntis Group</span></center><br /> <br />	
+</div>
 </body>
 </html>
