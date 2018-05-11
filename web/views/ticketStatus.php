@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	/* *********************************************************
 	 * Get Process Variables from retrived Instances
 	 *  ****************************************************** */
-	echo '<br /><br /><h2>Ticket Status</h2>';
+	echo '<br /><br /><h2>Open Tickets</h2>';
 
 	for ($i = 0; $i < count($instances); $i++) {
 		$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET", NULL);
@@ -118,6 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 	//print_r($allInstances);
 	
+	//print_r($input);
 	/* *********************************************************
 	 * Display Ticket per E-Mail 
 	 *  ****************************************************** */
@@ -128,15 +129,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		// Get Ticket Status Summary (only if it is set)
 	
 		if($allInstances[$instances[$i]]['customerMail']['value'] === $_POST['email']){
-			// Get ID of instance
-			echo '<tr><td>'.$instances[$i].'</td>';
-			echo '<td>'.$allInstances[$instances[$i]]['summary']['value'].'</td>';
-			echo '<td>'.$allInstances[$instances[$i]]['customerMail']['value'].'</td>';
-			echo '<td><strong>'.$allInstances[$instances[$i]]['ticketStatus']['value'].'</strong></td>'; 
-			echo '</tr>';
+			
+			if(!in_array($allInstances[$instances[$i]]['summary']['value'], $usedValue)){
+			
+				// Get ID of instance
+				echo '<tr><td>'.$instances[$i].'</td>';
+				echo '<td>'.$allInstances[$instances[$i]]['summary']['value'].'</td>';
+				echo '<td>'.$allInstances[$instances[$i]]['customerMail']['value'].'</td>';
+				echo '<td><strong>'.$allInstances[$instances[$i]]['ticketStatus']['value'].'</strong></td>'; 
+				echo '</tr>';
+			}
+		$usedValue[] = $allInstances[$instances[$i]]['summary']['value'];
 		}
 	}
-	
+	//var_dump($usedValue);
 	echo '</table>';
 	//print_r($allInstances);
 
