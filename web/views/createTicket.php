@@ -108,7 +108,8 @@
 	 // If form was submitted
 	 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
      
-	 	$result = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
+	 	//$result = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/start", "POST", $data_string);
+			 	$result = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-definition/key/OverallIncident/submit-form", "POST", $data_string);
       
 	  	// Success
 	  	if (strpos($result, 'definitionId') !== false) {
