@@ -11,7 +11,22 @@
  <link rel="manifest" href="/site.webmanifest">
  <meta name="msapplication-TileColor" content="#da532c">
  <meta name="theme-color" content="#ffffff">
+<style>
+	.glyphicon.spinning {
+	    animation: spin 1s infinite linear;
+	    -webkit-animation: spin2 1s infinite linear;
+	}
 
+	@keyframes spin {
+	    from { transform: scale(1) rotate(0deg); }
+	    to { transform: scale(1) rotate(360deg); }
+	}
+
+	@-webkit-keyframes spin2 {
+	    from { -webkit-transform: rotate(0deg); }
+	    to { -webkit-transform: rotate(360deg); }
+	}
+</style>
 </head>
 
 <body>
@@ -89,35 +104,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	/* *********************************************************
 	 * Get Process Variables from retrived Instances
 	 *  ****************************************************** */
-	echo '<h2>List of Instances with Variables</h2>';
+	echo '<br /><br /><h2>Ticket Status</h2>';
 
-	for ($i = 0; $i < 20; $i++) {
+	for ($i = 0; $i < count($instances); $i++) {
 		$instancesDetails = callCamundaAPI("https://saentisincident.herokuapp.com/rest/process-instance/".$instances[$i]."/variables", "GET", NULL);
 	
 		// Convert JSON to array (Not necessary, returns array!)
 		$arrInstancesDetails = json_decode($instancesDetails, true);
 	
 		// Save all information into array
-		$allInstances[$i][$instances[$i]] = $instancesDetails;
+		$allInstances[$instances[$i]] = $arrInstancesDetails;
 	
 	}
-	print_r($allInstances);
+	//print_r($allInstances);
 	
 	/* *********************************************************
 	 * Display Ticket per E-Mail 
 	 *  ****************************************************** */
 	echo '<table class="table" width="100%">';
 	echo '<tr><th>ID</th><th>Summary</th><th>E-Mail</th><th>Ticket Status</th></tr>';
-	for($i = 0; $i < 20; $i++){
+	for($i = 0; $i < count($allInstances); $i++){
 		
 		// Get Ticket Status Summary (only if it is set)
 	
-		if($arrInstancesDetails['customerMail']['value'] === $_POST['email']){
+		if($allInstances[$instances[$i]]['customerMail']['value'] === $_POST['email']){
 			// Get ID of instance
 			echo '<tr><td>'.$instances[$i].'</td>';
-			echo '<td>'.$allInstances['summary']['value'].'</td>';
-			echo '<td>'.$allInstances['customerMail']['value'].'</td>';
-			echo '<td><strong>'.$allInstances['ticketStatus']['value'].'</strong></td>'; 
+			echo '<td>'.$allInstances[$instances[$i]]['summary']['value'].'</td>';
+			echo '<td>'.$allInstances[$instances[$i]]['customerMail']['value'].'</td>';
+			echo '<td><strong>'.$allInstances[$instances[$i]]['ticketStatus']['value'].'</strong></td>'; 
 			echo '</tr>';
 		}
 	}
