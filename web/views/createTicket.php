@@ -44,7 +44,9 @@
 	 <h2>Incident Creation </h2>
 	 
 	 <?php
-$desc = nl2br($_POST['description']);
+
+$desc = str_replace(PHP_EOL,"\n",$_POST['description']);
+
 	 // Create JSON
 	 $data_string = '{
 	   "variables": {
