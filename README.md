@@ -17,7 +17,7 @@ The following packages and libraries are used (see pom.xml file fore more inform
 - silex: 2.0.4
 
 ## Instructions
-To access the PHP webform to create a Incident, use the following form...
+To access the PHP webform to create a Incident, track an incident and to access the administrative dashboard access https://saentisincident-php.herokuapp.com/
 
 ## License
 
