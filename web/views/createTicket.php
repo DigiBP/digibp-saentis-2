@@ -45,7 +45,8 @@
 	 
 	 <?php
 
-	$desc = str_replace(PHP_EOL,"\n",$_POST['description']);
+	//$desc = str_replace(PHP_EOL,"\n",$_POST['description']);
+	$desc = trim( preg_replace( '/\s+/', '<br/>', $_POST['description'] ) );
 
 	 // Create JSON
 	 $data_string = '{
@@ -105,7 +106,6 @@
 	 }
 	 }';
     
-	$data_string = json_encode($data_string);     var_dump($data_string);
 
 	 // If form was submitted
 	 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
