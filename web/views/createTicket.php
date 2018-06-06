@@ -103,7 +103,7 @@ $desc = nl2br($_POST['description']);
 	 }
 	 }';
     
-	     //var_dump($data_string);
+	     var_dump($data_string);
 
 	 // If form was submitted
 	 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
